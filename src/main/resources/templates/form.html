@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Formulario de usuario</title>
+    </head>
+    <body>
+        <h1>Formulario de usuario</h1>
+        <form action="#" th:action="@{/submit}" th:object="${user}" method="post">
+            <label for="name">Nombre de usuario:</label>
+            <input type="text" th:field="*{name}" id="name" />
+            <br/>
+            <label for="years">Edad de usuario:</label>
+            <input type="number" th:field="*{years}" id="years" />
+            <br/>
+            <label for="countryBirth">Pais de nacimiento de usuario:</label>
+            <input type="text" th:field="*{countryBirth}" id="countryBirth" />
+            <br/>
+            <input type="submit" value="Enviar" />
+        </form>
+    </body>
+</html>
